@@ -186,5 +186,5 @@ class Varstack:
                 raise
             return yaml.safe_load(decrypted_string.data)
         except:
-            self.log.error('could not decrypt string. Using its encrypted representation.')
+            self.log.exception('could not decrypt string. Using its encrypted representation.')
             return encrypted_string
